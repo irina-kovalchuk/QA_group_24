@@ -1,0 +1,111 @@
+1 посмотреть где я
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands
+$ pwd
+/d/Linux terminal (GitBash) commands
+
+2 создать папку
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands
+$ mkdir folder
+
+3 зайти в паку
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands
+$ cd folder/
+
+4 создать 3 папки
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ mkdir folder1 folder2 folder3
+
+5 зайти в любую папку
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ cd folder3/
+
+6 создать 5 файлов
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ touch d1.txt d2.txt d3.txt d4.json d5.json
+
+7 создать 3 папки
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ mkdir folder4 folder5 folder6
+
+8 вывести список содержимого папки
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ ls
+d1.txt  d2.txt  d3.txt  d4.json  d5.json  folder4/  folder5/  folder6/
+
+ Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ ls -la
+total 4
+drwxr-xr-x 1 Operator4 197121 0 Oct 30 17:14 ./
+drwxr-xr-x 1 Operator4 197121 0 Oct 30 17:06 ../
+-rw-r--r-- 1 Operator4 197121 0 Oct 30 17:12 d1.txt
+-rw-r--r-- 1 Operator4 197121 0 Oct 30 17:12 d2.txt
+-rw-r--r-- 1 Operator4 197121 0 Oct 30 17:12 d3.txt
+-rw-r--r-- 1 Operator4 197121 0 Oct 30 17:12 d4.json
+-rw-r--r-- 1 Operator4 197121 0 Oct 30 17:12 d5.json
+drwxr-xr-x 1 Operator4 197121 0 Oct 30 17:14 folder4/
+drwxr-xr-x 1 Operator4 197121 0 Oct 30 17:14 folder5/
+drwxr-xr-x 1 Operator4 197121 0 Oct 30 17:14 folder6/
+
+9 Открыть txt файл, написать туда, сохранить и выйти
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ vim d1.txt
+
+12 выйти из папки на уровень выше
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder3
+$ cd ..
+
+13 переместить 2 файла 
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ mv d1.txt d2.txt folder2
+
+14 скопировать 2 файла
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ cp d4.json d5.json folder1
+
+15 найти файл по имени
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ find -name d1.txt
+./folder2/d1.txt
+
+16 прсмотреть содержимое в реальном времени
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ tail -f d3.txt
+{"aaaaaaaa":"bbbbbbb",
+ "cccccccc":"ddddddd"
+}
+
+
+17 вывести несколько первых строк
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ head -2 d3.txt
+{"aaaaaaaa":"bbbbbbb",
+ "cccccccc":"ddddddd"
+
+18 вывести несколько последних строк
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ tail -2 d3.txt
+}
+
+19 просмотреть содержимое длинного файла
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ less d3.txt
+
+20 вывести дату и время
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder
+$ date
+Sat Oct 30 23:47:21     2021
+
+*
+21 отправить http запрос
+$ curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   185  100   185    0     0   1950      0 --:--:-- --:--:-- --:--:--  1968{"age":"32","family":{"children":[["Alex",24],["Kate",12]],"pets":{"cat":{"age":3,"name":"Sunny"},"dog":{"age":4,"name":"Luky"}},"u_salary_1_5_year":4000},"name":"Vadim","salary":1000}
+
+
+22 написать скрипт который выполнит автоматически пункты 3,4,5,6,7,8,13
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder1
+$ chmod +x ./file1.txt
+
+Operator4@pc04 MINGW64 /d/Linux terminal (GitBash) commands/folder/folder1
+$ ./file1.txt
